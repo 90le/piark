@@ -16,7 +16,7 @@ ext {
 // （不用 def —— 脚本级绑定才能在 android{} 闭包与方法内可见）
 project.ext.piAppPkg = "com.piterm"
 project.ext.piBootZipCanonical = [url: "https://github.com/90le/piark/releases/download/v0.1.0-bootstrap/pi-bootstrap-aarch64-v1.0.zip", checksum: "53a7c0da822c2338aa544c5042229783cd9d6d8df53f38e41d832442ae9392f8"]
-piBootZipPiterm   = [url: "https://github.com/90le/piark/releases/download/v0.1.0-bootstrap/pi-bootstrap-aarch64-v1.0-piterm.zip", checksum: "f6ed829f3ae8b59c9c777dd42f185e664c0aacc421d43750362b9f7930bdf087"]
+project.ext.piBootZipPiterm = [url: "https://github.com/90le/piark/releases/download/v0.1.0-bootstrap/pi-bootstrap-aarch64-v1.0-piterm.zip", checksum: "f6ed829f3ae8b59c9c777dd42f185e664c0aacc421d43750362b9f7930bdf087"]
 
 android {
     namespace "com.termux"
