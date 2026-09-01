@@ -1,9 +1,3 @@
-// 包名事实源：pi 风味 bootstrap 的字节路径必须与包名一致，据此自动选 zip 风味
-// （不用 def —— 脚本级绑定才能在 android{} 闭包与方法内可见）
-piAppPkg = "com.piterm"
-piBootZipCanonical = [url: "https://github.com/90le/piark/releases/download/v0.1.0-bootstrap/pi-bootstrap-aarch64-v1.0.zip", checksum: "53a7c0da822c2338aa544c5042229783cd9d6d8df53f38e41d832442ae9392f8"]
-piBootZipPiterm   = [url: "https://github.com/90le/piark/releases/download/v0.1.0-bootstrap/pi-bootstrap-aarch64-v1.0-piterm.zip", checksum: "f6ed829f3ae8b59c9c777dd42f185e664c0aacc421d43750362b9f7930bdf087"]
-
 plugins {
     id "com.android.application"
 }
@@ -17,6 +11,12 @@ ext {
     // Currently supported values are: [ "apt-android-7" "apt-android-5" ]
     packageVariant = System.getenv("TERMUX_PACKAGE_VARIANT") ?: "apt-android-7" // Default: "apt-android-7"
 }
+
+// 包名事实源：pi 风味 bootstrap 的字节路径必须与包名一致，据此自动选 zip 风味
+// （不用 def —— 脚本级绑定才能在 android{} 闭包与方法内可见）
+piAppPkg = "com.piterm"
+piBootZipCanonical = [url: "https://github.com/90le/piark/releases/download/v0.1.0-bootstrap/pi-bootstrap-aarch64-v1.0.zip", checksum: "53a7c0da822c2338aa544c5042229783cd9d6d8df53f38e41d832442ae9392f8"]
+piBootZipPiterm   = [url: "https://github.com/90le/piark/releases/download/v0.1.0-bootstrap/pi-bootstrap-aarch64-v1.0-piterm.zip", checksum: "f6ed829f3ae8b59c9c777dd42f185e664c0aacc421d43750362b9f7930bdf087"]
 
 android {
     namespace "com.termux"
