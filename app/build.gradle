@@ -188,9 +188,9 @@ def downloadBootstrap(String arch, String expectedChecksum, String version) {
         }
     }
 
-    // pi 风味 bootstrap（aarch64）来自 piark releases；其余架构仍用官方 termux-packages
+    // pi 风味 bootstrap（仅 apt-android-7 变体的 aarch64）来自 piark releases；其余仍用官方
     def remoteUrl
-    if (arch == "aarch64") {
+    if (arch == "aarch64" && project.ext.packageVariant == "apt-android-7") {
         remoteUrl = "https://github.com/90le/piark/releases/download/v0.1.0-bootstrap/pi-bootstrap-aarch64-v1.0.zip"
     } else {
         remoteUrl = "https://github.com/termux/termux-packages/releases/download/bootstrap-" + version + "/bootstrap-" + arch + ".zip"
